@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Poppins:wght@400;500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  vertical-align: baseline;
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Poppins", sans-serif;
+}
+
+p, q, strong, small, span, pre {
+  font-family: "Nunito", sans-serif;
+}
+
+.container-fluid {
+  padding: 78px 40px 0 40px;
+  position: relative !important;
+}
+
+#hero {
+  height: 100vh;
+}
+#hero .container-fluid {
+  display: flex;
+}
+#hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #c3dbdb;
+  width: 40%;
+  height: 80%;
+  z-index: -1;
+}
+#hero .box-img {
+  flex: 8;
+  width: 62%;
+  height: 90vh;
+  background-color: #e2e8e8;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+#hero .box-img .text {
+  margin-left: -65px;
+}
+#hero .box-img .text .title {
+  margin-bottom: 3.5rem;
+}
+#hero .box-img .text .title h1 {
+  font-size: 60pt;
+  font-weight: 400;
+  line-height: 75px;
+  letter-spacing: 2px;
+  position: relative;
+}
+#hero .box-img .text .title h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 7px;
+  height: 7px;
+  width: 45px;
+  background-color: rgba(255, 255, 255, 0.8156862745);
+  z-index: 5;
+}
+#hero .box-img .text span {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+#hero .pagination {
+  flex: 2;
+  width: 10%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+#hero .pagination .list {
+  padding: 0 0 10% 18%;
+  white-space: break-spaces;
+}
+#hero .pagination .list li {
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  font-size: 10px;
+  letter-spacing: 2px;
+  opacity: 0.4;
+}
+#hero .pagination .list li.active {
+  opacity: 1;
+  position: relative;
+}
+#hero .pagination .list li.active::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 90px;
+  width: 40px;
+  height: 1.5px;
+  background-color: #000;
+}
+
+.topnav {
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  padding: 55px 30px;
+}
+.topnav img.logo {
+  width: 200px;
+}
+.topnav a {
+  float: left;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 12px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #1A1A1D;
+}
+.topnav a i {
+  font-size: 18px;
+}
+.topnav a.active {
+  background-color: #04AA6D;
+}
+.topnav-centered a {
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.topnav-right {
+  float: right;
+}
+
+/* Responsive navigation menu (for mobile devices) */
+@media screen and (max-width: 600px) {
+  .topnav a, .topnav-right {
+    float: none;
+    display: block;
+  }
+  .topnav-centered a {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+}
+nav.lateral {
+  flex: 2;
+  width: 10%;
+  position: relative;
+}
+nav.lateral .icon-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+nav.lateral .icon-bar li {
+  display: block;
+  text-align: center;
+  padding: 12px;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+nav.lateral .icon-bar li a {
+  color: #1A1A1D;
+}
+nav.lateral .icon-bar .pagination {
+  transform: rotateZ(-90deg);
+  width: 0 !important;
+  display: initial !important;
+}
+nav.lateral .icon-bar .pagination .list li {
+  font-size: 15px !important;
+  color: #414141;
+}
+nav.lateral .icon-bar .pagination .list li.active {
+  letter-spacing: 0 !important;
+}
+nav.lateral .icon-bar .pagination .list li.active::after {
+  width: 50px !important;
+}
+
+.button {
+  text-decoration: none;
+}
+.button.view {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  transform: translateX(-195px);
+}
+.button.view .text-button {
+  background-color: #c3dbdb;
+  width: 195px;
+  height: 80px;
+  text-wrap: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 10px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.button.view .icon {
+  background-color: white;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+}/*# sourceMappingURL=main.css.map */
