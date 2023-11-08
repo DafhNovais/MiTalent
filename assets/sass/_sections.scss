@@ -4,6 +4,10 @@
     position: relative !important;
 }
 
+.container {
+    padding: 80px 115px;
+}
+
 
 #hero {
     height: 100vh;
@@ -105,4 +109,15 @@
         }
 
     }
+}
+
+
+#gallery {
+    text-align: center;
+
+    // & .container {
+    //     padding: 80px 115px;
+    //     display: flex;
+    //     justify-content: center;
+    // }
 }

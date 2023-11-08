@@ -32,6 +32,10 @@ include "includes/header.php";
 
 </section>
 
+<?php
+include "includes/components/gallery.php";
+?>
+
 
 <?php
 include "includes/footer.php";

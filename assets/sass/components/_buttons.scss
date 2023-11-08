@@ -1,5 +1,11 @@
 .button {
     text-decoration: none;
+    font-family: "Nunito", sans-serif;
+    background-color: #c3dbdb;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+    text-align: center;
 
     &.view {
         position: absolute;
@@ -10,30 +16,34 @@
         text-align: center;
         transform: translateX(-195px);
 
-            & .text-button {
-                background-color: #c3dbdb;
-                width: 195px;
-                height: 80px;
-                text-wrap: nowrap;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: white;
-                font-size: 10px;
-                font-family: "Nunito", sans-serif;
-                font-weight: 700;
-                text-transform: uppercase;
-                letter-spacing: 2px;
-            }
+        & .text-button {
+            width: 195px;
+            height: 80px;
+            text-wrap: nowrap;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            font-weight: 700;
 
-            & .icon {
-                background-color: white;
-                width: 80px;
-                height: 80px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: #000;
-            }
+        }
+
+        & .icon {
+            background-color: white;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000;
+        }
+    }
+
+    &.primary {
+        padding: 15px 30px;
+        border-radius: 100px;
+        text-transform: uppercase;
+        font-size: 10px;
+        font-weight: 700;
     }
 }

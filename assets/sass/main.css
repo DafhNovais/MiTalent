@@ -20,6 +20,10 @@ p, q, strong, small, span, pre {
   position: relative !important;
 }
 
+.container {
+  padding: 80px 115px;
+}
+
 #hero {
   height: 100vh;
 }
@@ -105,6 +109,10 @@ p, q, strong, small, span, pre {
   width: 40px;
   height: 1.5px;
   background-color: #000;
+}
+
+#gallery {
+  text-align: center;
 }
 
 .topnav {
@@ -199,6 +207,12 @@ nav.lateral .icon-bar .pagination .list li.active::after {
 
 .button {
   text-decoration: none;
+  font-family: "Nunito", sans-serif;
+  background-color: #c3dbdb;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: white;
+  text-align: center;
 }
 .button.view {
   position: absolute;
@@ -210,19 +224,14 @@ nav.lateral .icon-bar .pagination .list li.active::after {
   transform: translateX(-195px);
 }
 .button.view .text-button {
-  background-color: #c3dbdb;
   width: 195px;
   height: 80px;
   text-wrap: nowrap;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
   font-size: 10px;
-  font-family: "Nunito", sans-serif;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
 }
 .button.view .icon {
   background-color: white;
@@ -232,4 +241,111 @@ nav.lateral .icon-bar .pagination .list li.active::after {
   align-items: center;
   justify-content: center;
   color: #000;
+}
+.button.primary {
+  padding: 15px 30px;
+  border-radius: 100px;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.show {
+  display: block;
+}
+
+#myBtnContainer ul {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+#myBtnContainer ul li {
+  width: 100px;
+  text-align: center;
+}
+#myBtnContainer ul li.btn {
+  padding: 12px 0px;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 10px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #1A1A1D;
+  opacity: 0.6;
+}
+#myBtnContainer ul li.btn.active {
+  border-bottom: 2px solid #1A1A1D;
+  opacity: 1;
+}
+
+.content-gallery {
+  margin: 70px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.content-gallery#tabuleiro .card {
+  height: 400px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  transition: 0.3s ease-in-out;
+  overflow: hidden;
+  position: relative;
+}
+.content-gallery#tabuleiro .card.primary {
+  background-color: #e2e8e8;
+}
+.content-gallery#tabuleiro .card.secondary {
+  background-color: #d3dcdc;
+}
+.content-gallery#tabuleiro .card::after {
+  content: "\f061";
+  position: absolute;
+  top: 0;
+  right: -100px;
+  padding: 15px 17px;
+  background-color: #d3dcdc;
+  border-radius: 100%;
+  transition: 0.3s ease-in-out;
+  font-family: "Font Awesome 5 Free";
+  transform: rotate(315deg) translateY(-70px);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}
+.content-gallery#tabuleiro .card .content .title {
+  text-align: center;
+  padding: 40px 0;
+  transform: translateY(100%);
+  transition: transform 0.5s ease-in-out;
+}
+.content-gallery#tabuleiro .card .content .title h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #fff;
+}
+.content-gallery#tabuleiro .card .content .title span {
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+.content-gallery#tabuleiro .card:hover {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+.content-gallery#tabuleiro .card:hover::after {
+  top: 0;
+  right: 0;
+  transform: rotate(315deg) translateX(-15px);
+}
+.content-gallery#tabuleiro .card:hover .content .title {
+  transform: translateY(0);
 }/*# sourceMappingURL=main.css.map */
