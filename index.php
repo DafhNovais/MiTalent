@@ -34,6 +34,7 @@ include "includes/header.php";
 
 <?php
 include "includes/components/gallery.php";
+include "includes/components/news.php";
 ?>
 
 

@@ -1,17 +1,16 @@
-
 .container-fluid {
-    padding: 78px 40px 0 40px;
+    padding: 40px;
     position: relative !important;
 }
 
 .container {
-    padding: 80px 115px;
+    padding: 40px 100px;
 }
 
 
 #hero {
     height: 100vh;
-    
+
     & .container-fluid {
         display: flex;
     }
@@ -48,8 +47,8 @@
                     line-height: 75px;
                     letter-spacing: 2px;
                     position: relative;
-            
-                    &::after{
+
+                    &::after {
                         content: "";
                         position: absolute;
                         bottom: 0;
@@ -120,4 +119,60 @@
     //     display: flex;
     //     justify-content: center;
     // }
+}
+
+#footer {
+    & .logo-news {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #1d1d1d30;
+        padding: 0 0 30px 0;
+
+        & .logo {
+            & img {
+                width: 160px;
+            }
+        }
+
+        & .content {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            height: 30px;
+        }
+    }
+
+    & .copy-social {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 40px 0 0 0;
+
+        & .copy {
+            font-size: 12px;
+            font-weight: 500;
+            color: #a2a2a2;
+
+            & a {
+                text-decoration: none;
+                color: #808080;
+                transition: 0.3s ease-in-out;
+
+                &:hover {
+                    color: #b9dfdf;
+                }
+            }
+        }
+
+        & .social {
+            display: flex;
+            gap: 2rem;
+
+            & a {
+                text-decoration: none;
+                color: #1d1d1d;
+            }
+        }
+    }
 }

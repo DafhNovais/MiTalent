@@ -6,6 +6,7 @@
     letter-spacing: 2px;
     color: white;
     text-align: center;
+    transition: 0.4s ease-in-out;
 
     &.view {
         position: absolute;
@@ -37,6 +38,11 @@
             justify-content: center;
             color: #000;
         }
+
+        &:hover {
+            background-color: #b9dfdf;
+            box-shadow: 0px 1px 15px #b9dfdf80;
+        }
     }
 
     &.primary {
@@ -45,5 +51,41 @@
         text-transform: uppercase;
         font-size: 10px;
         font-weight: 700;
+
+        &:hover {
+            background-color: #b9dfdf;
+            box-shadow: 0px 1px 15px #b9dfdf80;
+        }
     }
+
+    
+    &.secondary {
+        padding: 15px 30px;
+        text-transform: uppercase;
+        font-size: 10px;
+        font-weight: 700;
+        background-color: white;
+        color: #1d1d1d;
+
+        &:hover {
+            box-shadow: 0px 1px 15px #b9dfdf80;
+        }
+    }
+
+    &.copy {
+        padding: 0 0 0 40px;
+        text-transform: uppercase;
+        font-size: 10px;
+        font-weight: 500;
+        background-color: transparent;
+        color: #1d1d1d;
+        border-left: 2px solid #b9dfdf;
+        letter-spacing: 2px;
+
+        & .icon {
+            font-size: 16px;
+        }
+
+    }
+
 }
