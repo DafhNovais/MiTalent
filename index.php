@@ -13,7 +13,7 @@ include "includes/header.php";
                 </div>
                 <span>Young Model 2020</span>
 
-                <a class="button view" href="#">
+                <a class="button view" href="javascript:void(0)">
                     <div class="text-button"><span>View Profile</span></div>
                     <div class="icon"><i class="fas fa-play"></i></div>
                 </a>
@@ -35,9 +35,5 @@ include "includes/header.php";
 <?php
 include "includes/components/gallery.php";
 include "includes/components/news.php";
-?>
-
-
-<?php
 include "includes/footer.php";
 ?>

@@ -15,6 +15,10 @@ p, q, strong, small, span, pre {
   font-family: "Nunito", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth !important;
+}
+
 .container-fluid {
   padding: 40px;
   position: relative !important;
@@ -45,6 +49,10 @@ p, q, strong, small, span, pre {
   width: 62%;
   height: 90vh;
   background-color: #e2e8e8;
+  background-image: url(../images/hero-bg.jpg);
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   align-items: center;
   position: relative;
@@ -152,11 +160,15 @@ p, q, strong, small, span, pre {
 }
 #footer .copy-social .social {
   display: flex;
-  gap: 2rem;
 }
 #footer .copy-social .social a {
   text-decoration: none;
   color: #1d1d1d;
+  padding: 16px;
+  transition: 0.3s ease-in-out;
+}
+#footer .copy-social .social a:hover {
+  color: #b9dfdf;
 }
 
 .topnav {
@@ -179,9 +191,13 @@ p, q, strong, small, span, pre {
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #1A1A1D;
+  transition: 0.3s ease-in-out;
 }
 .topnav a i {
   font-size: 18px;
+}
+.topnav a:hover {
+  opacity: 0.6;
 }
 .topnav a.active {
   background-color: #04AA6D;
@@ -199,7 +215,8 @@ p, q, strong, small, span, pre {
 
 /* Responsive navigation menu (for mobile devices) */
 @media screen and (max-width: 600px) {
-  .topnav a, .topnav-right {
+  .topnav a,
+  .topnav-right {
     float: none;
     display: block;
   }
@@ -226,12 +243,17 @@ nav.lateral .icon-bar {
 nav.lateral .icon-bar li {
   display: block;
   text-align: center;
-  padding: 12px;
   transition: all 0.3s ease;
   font-size: 16px;
+  margin: 16px 0;
 }
 nav.lateral .icon-bar li a {
+  padding: 12px;
   color: #1A1A1D;
+  transition: 0.3s ease-in-out;
+}
+nav.lateral .icon-bar li:hover a {
+  color: #b9dfdf;
 }
 nav.lateral .icon-bar .pagination {
   transform: rotateZ(-90deg);
@@ -322,9 +344,13 @@ nav.lateral .icon-bar .pagination .list li.active::after {
   color: #1d1d1d;
   border-left: 2px solid #b9dfdf;
   letter-spacing: 2px;
+  transition: 0.3s ease-in-out;
 }
 .button.copy .icon {
   font-size: 16px;
+}
+.button.copy:hover {
+  color: #b9dfdf;
 }
 
 .show {
@@ -377,6 +403,10 @@ nav.lateral .icon-bar .pagination .list li.active::after {
 .content-gallery#tabuleiro .card.secondary {
   background-color: #d3dcdc;
 }
+.content-gallery#tabuleiro .card img {
+  width: 100%;
+  height: 100%;
+}
 .content-gallery#tabuleiro .card::after {
   content: "\f061";
   position: absolute;
@@ -392,11 +422,27 @@ nav.lateral .icon-bar .pagination .list li.active::after {
   font-size: 16px;
   font-weight: 600;
 }
+.content-gallery#tabuleiro .card .content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
 .content-gallery#tabuleiro .card .content .title {
   text-align: center;
   padding: 40px 0;
   transform: translateY(100%);
   transition: transform 0.5s ease-in-out;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: rgba(26, 26, 29, 0.6784313725);
 }
 .content-gallery#tabuleiro .card .content .title h2 {
   font-size: 1.5rem;
@@ -413,8 +459,6 @@ nav.lateral .icon-bar .pagination .list li.active::after {
   opacity: 0.6;
 }
 .content-gallery#tabuleiro .card:hover {
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.75);
   transition: 0.3s ease-in-out;
   cursor: pointer;
 }
@@ -456,6 +500,7 @@ nav.lateral .icon-bar .pagination .list li.active::after {
 }
 #news .news .content h3:hover {
   color: #b9dfdf;
+  cursor: pointer;
 }
 #news .news .content span {
   font-size: 12px;
@@ -488,6 +533,7 @@ nav.lateral .icon-bar .pagination .list li.active::after {
 #news .news .grid .s-card-2 a img,
 #news .news .grid .s-card-3 a img {
   background-color: #d3dcdc;
+  width: 100%;
 }
 #news .news .grid .s-card {
   grid-area: s-card;
@@ -504,13 +550,21 @@ nav.lateral .icon-bar .pagination .list li.active::after {
   background-color: #e2e8e8;
   display: flex;
   position: relative;
+  overflow: hidden;
+  transition: 0.3s ease-in-out;
+}
+#news .news .grid .b-card img {
+  width: 100%;
 }
 #news .news .grid .b-card .card-overlay {
   width: 300px;
   height: 100%;
   display: flex;
   align-items: flex-end;
-  background-color: rgba(185, 223, 223, 0.5019607843);
+  background: linear-gradient(0deg, rgb(185, 223, 223), rgba(185, 223, 223, 0.5019607843));
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 #news .news .grid .b-card .card-overlay .content {
   padding: 0 40px 40px 40px;
@@ -525,6 +579,9 @@ nav.lateral .icon-bar .pagination .list li.active::after {
 }
 #news .news .grid .b-card .card-overlay .content h3:hover {
   color: white;
+}
+#news .news .grid .b-card:hover .card-overlay {
+  background: linear-gradient(0deg, rgb(120, 177, 177), rgba(185, 223, 223, 0.5019607843));
 }
 #news .news .grid .b-card .button {
   position: absolute;
@@ -543,6 +600,10 @@ nav.lateral .icon-bar .pagination .list li.active::after {
   height: 600px;
 }
 #news .news .grid .a-card .carousel .item {
+  height: 100%;
+}
+#news .news .grid .a-card .carousel .item img {
+  width: 100%;
   height: 100%;
 }
 #news .news .grid .a-card .content {
@@ -571,8 +632,12 @@ nav.lateral .icon-bar .pagination .list li.active::after {
   grid-area: m-card-2;
   background-color: #e2e8e8;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+#news .news .grid .m-card-2 img {
+  width: 100%;
+  height: 100%;
 }
 #news .news .grid .m-card-2 .play {
   padding: 30px;
@@ -581,6 +646,8 @@ nav.lateral .icon-bar .pagination .list li.active::after {
   color: white;
   display: flex;
   gap: 1.5rem;
+  position: absolute;
+  width: 100%;
 }
 #news .news .grid .m-card-2 .play .icon {
   width: 60px;
@@ -590,10 +657,14 @@ nav.lateral .icon-bar .pagination .list li.active::after {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.3s ease-in-out;
 }
 #news .news .grid .m-card-2 .play span {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 12px;
   font-weight: 700;
+}
+#news .news .grid .m-card-2 .play:hover .icon {
+  transform: scale(1.2);
 }/*# sourceMappingURL=main.css.map */

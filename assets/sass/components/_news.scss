@@ -34,6 +34,7 @@
 
                 &:hover {
                     color: #b9dfdf;
+                    cursor: pointer;
                 }
             }
 
@@ -68,6 +69,7 @@
 
                     & img {
                         background-color: #d3dcdc;
+                        width: 100%;
                     }
                 }
 
@@ -92,13 +94,22 @@
                 background-color: #e2e8e8;
                 display: flex;
                 position: relative;
+                overflow: hidden;
+                transition: 0.3s ease-in-out;
+
+                & img {
+                    width: 100%;
+                }
 
                 & .card-overlay {
                     width: 300px;
                     height: 100%;
                     display: flex;
                     align-items: flex-end;
-                    background-color: #b9dfdf80;
+                    background: linear-gradient(0deg, rgb(185 223 223), rgba(185, 223, 223, 0.5019607843));
+                    position: absolute;
+                    top: 0;
+                    left: 0;
 
                     & .content {
                         padding: 0 40px 40px 40px;
@@ -118,6 +129,12 @@
                         }
                     }
 
+                }
+
+                &:hover {
+                    & .card-overlay {
+                        background: linear-gradient(0deg, rgb(120 177 177), rgba(185, 223, 223, 0.5019607843));
+                    }
                 }
 
                 & .button {
@@ -141,6 +158,11 @@
 
                     & .item {
                         height: 100%;
+
+                        & img {
+                            width: 100%;
+                            height: 100%;
+                        }
                     }
                 }
 
@@ -177,8 +199,13 @@
                 grid-area: m-card-2;
                 background-color: #e2e8e8;
                 display: flex;
-                flex-direction: column;
-                justify-content: space-between;
+                align-items: flex-end;
+                position: relative;
+
+                & img {
+                    width: 100%;
+                    height: 100%;
+                }
 
                 & .play {
                     padding: 30px;
@@ -187,6 +214,8 @@
                     color: white;
                     display: flex;
                     gap: 1.5rem;
+                    position: absolute;
+                    width: 100%;
 
                     & .icon {
                         width: 60px;
@@ -196,6 +225,7 @@
                         display: flex;
                         align-items: center;
                         justify-content: center;
+                        transition: 0.3s ease-in-out;
                     }
 
                     & span {
@@ -203,6 +233,12 @@
                         letter-spacing: 2px;
                         font-size: 12px;
                         font-weight: 700;
+                    }
+
+                    &:hover {
+                        & .icon {
+                            transform: scale(1.2);
+                        }
                     }
                 }
             }

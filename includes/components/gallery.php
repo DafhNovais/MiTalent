@@ -12,23 +12,26 @@
                 </div>
             </div>
             <div class="content-gallery" id="tabuleiro">
-                <a class="card primary">
+                <a href="javascript:void(0)" class="card primary">
+                <img src="assets/images/gallery/1.jpg" alt="">
                     <div class="content">
                         <div class="title">
-                            <h2></h2>
-                            <span></span>
+                            <h2>Mary Braga</h2>
+                            <span>Musician</span>
                         </div>
                     </div>
                 </a>
-                <a class="card secondary">
+                <a href="javascript:void(0)" class="card secondary">
+                <img src="assets/images/gallery/2.jpg" alt="">
                     <div class="content">
                         <div class="title">
-                            <h2></h2>
-                            <span></span>
+                            <h2>Xhin Quian</h2>
+                            <span>Musician</span>
                         </div>
                     </div>
                 </a>
-                <a class="card primary">
+                <a href="javascript:void(0)" class="card primary">
+                    <img src="assets/images/gallery/3.jpg" alt="">
                     <div class="content">
                         <div class="title">
                             <h2>Keith Ruiz</h2>
@@ -36,49 +39,54 @@
                         </div>
                     </div>
                 </a>
-                <a class="card secondary">
+                <a href="javascript:void(0)" class="card secondary">
+                <img src="assets/images/gallery/4.jpg" alt="">
                     <div class="content">
                         <div class="title">
-                            <h2></h2>
-                            <span></span>
+                            <h2>Jhon Maisel</h2>
+                            <span>Musician</span>
                         </div>
                     </div>
                 </a>
-                <a class="card secondary">
+                <a href="javascript:void(0)" class="card secondary">
+                <img src="assets/images/gallery/5.jpg" alt="">
                     <div class="content">
                         <div class="title">
-                            <h2></h2>
-                            <span></span>
+                            <h2>Tomas Galezz</h2>
+                            <span>Musician</span>
                         </div>
                     </div>
                 </a>
-                <a class="card primary">
+                <a href="javascript:void(0)" class="card primary">
+                <img src="assets/images/gallery/6.jpg" alt="">
                     <div class="content">
                         <div class="title">
-                            <h2></h2>
-                            <span></span>
+                            <h2>Lara Croft</h2>
+                            <span>Musician</span>
                         </div>
                     </div>
                 </a>
-                <a class="card secondary">
+                <a href="javascript:void(0)" class="card secondary">
+                <img src="assets/images/gallery/7.jpg" alt="">
                     <div class="content">
                         <div class="title">
-                            <h2></h2>
-                            <span></span>
+                            <h2>Herry Swan</h2>
+                            <span>Musician</span>
                         </div>
                     </div>
                 </a>
-                <a class="card primary">
+                <a href="javascript:void(0)" class="card primary">
+                <img src="assets/images/gallery/8.jpg" alt="">
                     <div class="content">
                         <div class="title">
-                            <h2></h2>
-                            <span></span>
+                            <h2>Lilian Shyne</h2>
+                            <span>Musician</span>
                         </div>
                     </div>
                 </a>
             </div>
 
-            <a href="" class="button primary">Explore More</a>
+            <a href="javascript:void(0)" class="button primary">Explore More</a>
         </div>
     </div>
 </section>
