@@ -525,6 +525,10 @@ nav.lateral .icon-bar .pagination .list li.active::after {
 .content-gallery#tabuleiro .card img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
 }
 .content-gallery#tabuleiro .card::after {
   content: "\f061";
@@ -645,6 +649,14 @@ nav.lateral .icon-bar .pagination .list li.active::after {
   font-size: 12px;
   opacity: 0.8;
 }
+#news .news img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
 #news .news .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -685,15 +697,11 @@ nav.lateral .icon-bar .pagination .list li.active::after {
 }
 #news .news .grid .b-card {
   grid-area: b-card;
-  height: 350px;
   background-color: #e2e8e8;
   display: flex;
   position: relative;
   overflow: hidden;
   transition: 0.3s ease-in-out;
-}
-#news .news .grid .b-card img {
-  width: 100%;
 }
 #news .news .grid .b-card .card-overlay {
   width: 300px;
@@ -729,20 +737,16 @@ nav.lateral .icon-bar .pagination .list li.active::after {
 }
 #news .news .grid .a-card {
   grid-area: a-card;
-  height: 700px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  gap: 1rem;
 }
 #news .news .grid .a-card .carousel {
   background-color: #e2e8e8;
-  height: 600px;
-}
-#news .news .grid .a-card .carousel .item {
   height: 100%;
 }
-#news .news .grid .a-card .carousel .item img {
-  width: 100%;
+#news .news .grid .a-card .carousel .item {
   height: 100%;
 }
 #news .news .grid .a-card .content {
@@ -759,8 +763,6 @@ nav.lateral .icon-bar .pagination .list li.active::after {
   gap: 1rem;
 }
 #news .news .grid .m-card a img {
-  width: 100%;
-  height: 200px;
   background-color: #e2e8e8;
 }
 #news .news .grid .m-card a .content {
@@ -773,10 +775,6 @@ nav.lateral .icon-bar .pagination .list li.active::after {
   display: flex;
   align-items: flex-end;
   position: relative;
-}
-#news .news .grid .m-card-2 img {
-  width: 100%;
-  height: 100%;
 }
 #news .news .grid .m-card-2 .play {
   padding: 30px;
@@ -832,9 +830,6 @@ nav.lateral .icon-bar .pagination .list li.active::after {
   #news .news .grid .s-card-2 a,
   #news .news .grid .s-card-3 a {
     gap: 1rem;
-  }
-  #news .news .grid .b-card img {
-    height: 100%;
   }
   #news .news .grid .b-card .card-overlay {
     width: 100%;
