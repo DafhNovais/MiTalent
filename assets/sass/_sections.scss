@@ -27,7 +27,6 @@ html {
         background-color: #c3dbdb;
         width: 40%;
         height: 80%;
-        z-index: -1;
     }
 
     & .box-img {
@@ -47,7 +46,6 @@ html {
             margin-left: -65px;
 
             & .title {
-                margin-bottom: 3.5rem;
 
                 & h1 {
                     font-size: 60pt;
@@ -55,6 +53,7 @@ html {
                     line-height: 75px;
                     letter-spacing: 2px;
                     position: relative;
+                    margin-bottom: 3.5rem;
 
                     &::after {
                         content: "";
@@ -118,15 +117,8 @@ html {
     }
 }
 
-
 #gallery {
     text-align: center;
-
-    // & .container {
-    //     padding: 80px 115px;
-    //     display: flex;
-    //     justify-content: center;
-    // }
 }
 
 #footer {
@@ -185,6 +177,100 @@ html {
                 &:hover {
                     color: #b9dfdf;
                 }
+            }
+        }
+    }
+}
+
+
+
+@media (width < 425px) {
+
+    .container-fluid {
+        padding: 10px;
+        overflow: hidden;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+
+    #hero {
+        height: 95vh;
+
+        & .container-fluid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+
+        &::before {
+            top: 50px;
+            width: 100%;
+            height: 45%;
+        }
+
+        & .box-img {
+            flex: none;
+            width: 100%;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            transform: translateY(10px);
+            flex-direction: column-reverse;
+
+
+            & .text {
+                margin-left: 0;
+                transform: translateY(20px);
+
+                & .title {
+                    margin-bottom: 1rem;
+
+                    & h1 {
+                        font-size: 26pt;
+                        line-height: 40px;
+                        margin-bottom: 0.5rem;
+                    }
+
+                }
+
+                & span {
+                    font-size: 8px;
+                }
+            }
+        }
+
+        & .pagination {
+            display: none;
+
+        }
+    }
+
+
+    #footer {
+        & .logo-news {
+            border-bottom: 1px solid #1d1d1d30;
+            padding: 0 0 30px 0;
+            flex-direction: column;
+            margin-top: 2rem;
+            gap: 1.5rem;
+
+            & .content {
+                gap: 0.5rem;
+            }
+        }
+
+        & .copy-social {
+            padding: 40px 0 20px 0;
+            flex-direction: column-reverse;
+            gap: 2rem;
+
+            & .copy {
+                font-size: 10px;
+                text-align: center;
             }
         }
     }

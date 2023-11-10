@@ -6,9 +6,9 @@
         <li><a href="javascript:void(0)"><i class="fab fa-twitter"></i></a></li>
 
         <div class="pagination">
-        <ol class="list">
-            <li class="active">02</li>
-        </0l>
-    </div>
+            <ol class="list">
+                <li class="active">02</li>
+                </0l>
+        </div>
     </menu>
 </nav>

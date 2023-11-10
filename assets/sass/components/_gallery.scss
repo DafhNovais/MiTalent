@@ -141,3 +141,47 @@
         }
     }
 }
+
+@media (width < 425px) {
+
+    #myBtnContainer {
+        & ul {
+
+            & li {
+
+                &.btn {
+                    font-size: 8px;
+                }
+            }
+        }
+    }
+
+    .content-gallery {
+        margin: 35px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        &#tabuleiro {
+            & .card {
+                border-radius: 4px;
+
+                & .content {
+
+                    & .title {
+
+                        & h2 {
+                            font-size: 1rem;
+                        }
+
+                        & span {
+                            font-size: 8px;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+}
