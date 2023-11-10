@@ -1,0 +1,178 @@
+.topnav {
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  padding: 55px 30px;
+
+  & img.logo {
+    width: 200px;
+  }
+
+  & a {
+    float: left;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: "Nunito", sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #1A1A1D;
+    transition: 0.3s ease-in-out;
+
+    & i {
+      font-size: 18px;
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+  }
+
+  &-centered a {
+    float: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &-right {
+    float: right;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .topnav a,
+  .topnav-right {
+    float: none;
+    display: block;
+  }
+
+  .topnav-centered a {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+}
+
+
+// Menu Lateral
+
+nav.lateral {
+  flex: 2;
+  width: 10%;
+  position: relative;
+
+  .icon-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & li {
+      display: block;
+      text-align: center;
+      transition: all 0.3s ease;
+      font-size: 16px;
+      margin: 16px 0;
+
+      & a {
+        padding: 12px;
+        color: #1A1A1D;
+        transition: 0.3s ease-in-out;
+      }
+
+      &:hover {
+        & a {
+          color: #b9dfdf;
+        }
+      }
+    }
+
+    & .pagination {
+      transform: rotateZ(-90deg);
+      width: 0 !important;
+      display: initial !important;
+
+      & .list {
+
+        & li {
+          font-size: 15px !important;
+          color: #414141;
+
+          &.active {
+            letter-spacing: 0 !important;
+
+            &::after {
+              width: 50px !important;
+            }
+          }
+
+        }
+
+      }
+    }
+  }
+}
+
+
+@media (width < 425px) {
+
+  .topnav {
+    padding: 0;
+    z-index: 1;
+
+    & img.logo {
+      width: 160px;
+    }
+
+    & .m-none {
+      display: none;
+    }
+  }
+
+
+  // Menu Lateral
+
+  nav.lateral {
+    flex: none;
+    width: 100%;
+
+    .icon-bar {
+      position: absolute;
+      top: 10px;
+      z-index: 1;
+
+      & li {
+        font-size: 14px;
+        margin: 14px 0;
+      }
+
+      & .pagination {
+        display: flex !important;
+        flex-direction: column;
+
+        & .list {
+          & li {
+            &.active {
+              &::after {
+                left: 40px !important;
+                width: 40px !important;
+              }
+            }
+
+          }
+
+        }
+      }
+    }
+  }
+
+}
